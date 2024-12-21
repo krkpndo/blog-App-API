@@ -24,13 +24,10 @@ app.use(cors());
 app.use("/users", userRoutes);
 app.use("/blogs", blogRoutes);
 
-const corsOptions = {
-	origin: ['http://localhost:3000', 'https://blog-app-api-06de.onrender.com'],
-	// methods: ['GET'] //allow only specified HTTP methods //optional only if you want to restrict methods
-	// allowHeaders: ['Content-Type', "Authorization"], //allow specified
-	credentials: true, //allow credentials example cookis, authorization headers
-	optionsSuccessStatus: 200
-}
+app.use(cors({
+  origin: 'https://blog-app-client-7z3et3nqc-kirks-projects-8e9b4d23.vercel.app/', 
+  credentials: true,
+}));
 app.use(cors(corsOptions));
 
 if(require.main === module){
