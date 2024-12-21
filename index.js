@@ -28,7 +28,6 @@ app.use(cors({
   origin: 'https://blog-app-client-7z3et3nqc-kirks-projects-8e9b4d23.vercel.app/', 
   credentials: true,
 }));
-app.use(cors(corsOptions));
 
 if(require.main === module){
 	app.listen(process.env.PORT || 3000, ()=> {
