@@ -25,7 +25,7 @@ app.use("/users", userRoutes);
 app.use("/blogs", blogRoutes);
 
 app.use(cors({
-  origin: 'https://blog-app-client-7z3et3nqc-kirks-projects-8e9b4d23.vercel.app/', 
+  origin: ['https://blog-app-client-7z3et3nqc-kirks-projects-8e9b4d23.vercel.app', 'http://localhost:3000'],
   credentials: true,
 }));
 
